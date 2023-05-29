@@ -35,25 +35,32 @@ namespace SWDesign1
         {
             if (textBox1.Text != string.Empty || textBox2.Text != string.Empty)
             {
-                cmd = new SqlCommand
-                    ("select * from[dbo].[UserInfo] where username = '" + textBox1.Text + "' and password = '" + textBox2.Text + "'", conn);
-                dr = cmd.ExecuteReader();
-                if (dr.Read())
+                if (textBox1.Text != string.Empty || textBox2.Text != string.Empty)
                 {
-                    dr.Close();
-                    this.Hide();
-                    // Home home = new Home();//lma nhot l homepage
-                    //home.ShowDialog();
+
+                    string email = textBox1.Text;
+                    string pass = textBox2.Text;
+
+                    User user = new User();
+                    dr = user.login(email, pass);
+
+                    if (dr.Read())
+                    {
+                        dr.Close();
+                        this.Hide();
+                        // Home home = new Home();//lma nhot l homepage
+                        //home.ShowDialog();
+                    }
+                    else
+                    {
+                        dr.Close();
+                        MessageBox.Show("No Account avilable with this email and password ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 else
                 {
-                    dr.Close();
-                    MessageBox.Show("No Account avilable with this username and password ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Please enter value in all field.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-            }
-            else
-            {
-                MessageBox.Show("Please enter value in all field.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -80,6 +87,8 @@ namespace SWDesign1
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            conn = new SqlConnection(@"Data Source=desktop-94fv2gg\sqlexpress;Initial Catalog=CoffeShop;Integrated Security=True");
+            conn.Open();
 
         }
     }

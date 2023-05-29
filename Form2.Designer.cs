@@ -65,8 +65,10 @@ namespace SWDesign1
             this.groupBox1.Controls.Add(this.textBox_user);
             this.groupBox1.Controls.Add(this.textBox_email);
             this.groupBox1.Location = new System.Drawing.Point(1, 1);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(707, 911);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(566, 729);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Signup";
@@ -76,9 +78,10 @@ namespace SWDesign1
             // 
             this.button1.BackColor = System.Drawing.Color.White;
             this.button1.Font = new System.Drawing.Font("Century", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(185, 754);
+            this.button1.Location = new System.Drawing.Point(148, 603);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(211, 34);
+            this.button1.Size = new System.Drawing.Size(169, 27);
             this.button1.TabIndex = 15;
             this.button1.Text = "Create Account";
             this.button1.UseVisualStyleBackColor = false;
@@ -90,9 +93,10 @@ namespace SWDesign1
             this.label_phone.BackColor = System.Drawing.Color.Transparent;
             this.label_phone.Font = new System.Drawing.Font("Century", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label_phone.ForeColor = System.Drawing.Color.Black;
-            this.label_phone.Location = new System.Drawing.Point(30, 705);
+            this.label_phone.Location = new System.Drawing.Point(24, 564);
+            this.label_phone.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_phone.Name = "label_phone";
-            this.label_phone.Size = new System.Drawing.Size(161, 23);
+            this.label_phone.Size = new System.Drawing.Size(141, 21);
             this.label_phone.TabIndex = 14;
             this.label_phone.Text = "Phone Number";
             this.label_phone.Click += new System.EventHandler(this.label7_Click);
@@ -100,9 +104,10 @@ namespace SWDesign1
             // textBox_phone
             // 
             this.textBox_phone.BackColor = System.Drawing.Color.White;
-            this.textBox_phone.Location = new System.Drawing.Point(339, 697);
+            this.textBox_phone.Location = new System.Drawing.Point(271, 558);
+            this.textBox_phone.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_phone.Name = "textBox_phone";
-            this.textBox_phone.Size = new System.Drawing.Size(289, 31);
+            this.textBox_phone.Size = new System.Drawing.Size(232, 27);
             this.textBox_phone.TabIndex = 13;
             this.textBox_phone.TextChanged += new System.EventHandler(this.textBox_phone_TextChanged);
             // 
@@ -112,18 +117,20 @@ namespace SWDesign1
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Century", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(30, 616);
+            this.label6.Location = new System.Drawing.Point(24, 493);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(247, 69);
+            this.label6.Size = new System.Drawing.Size(217, 63);
             this.label6.TabIndex = 12;
             this.label6.Text = "Enter your Adress\r\nStreet no, Building No,\r\nfloor .. etc";
             // 
             // textBox_Adress
             // 
             this.textBox_Adress.BackColor = System.Drawing.Color.White;
-            this.textBox_Adress.Location = new System.Drawing.Point(339, 644);
+            this.textBox_Adress.Location = new System.Drawing.Point(271, 515);
+            this.textBox_Adress.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_Adress.Name = "textBox_Adress";
-            this.textBox_Adress.Size = new System.Drawing.Size(289, 31);
+            this.textBox_Adress.Size = new System.Drawing.Size(232, 27);
             this.textBox_Adress.TabIndex = 11;
             // 
             // label4
@@ -132,9 +139,10 @@ namespace SWDesign1
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Century", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(30, 573);
+            this.label4.Location = new System.Drawing.Point(24, 458);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(201, 23);
+            this.label4.Size = new System.Drawing.Size(177, 21);
             this.label4.TabIndex = 7;
             this.label4.Text = "Re-enter Password";
             this.label4.Click += new System.EventHandler(this.label4_Click);
@@ -142,9 +150,10 @@ namespace SWDesign1
             // textBox_pass2
             // 
             this.textBox_pass2.BackColor = System.Drawing.Color.White;
-            this.textBox_pass2.Location = new System.Drawing.Point(339, 582);
+            this.textBox_pass2.Location = new System.Drawing.Point(271, 466);
+            this.textBox_pass2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_pass2.Name = "textBox_pass2";
-            this.textBox_pass2.Size = new System.Drawing.Size(289, 31);
+            this.textBox_pass2.Size = new System.Drawing.Size(232, 27);
             this.textBox_pass2.TabIndex = 6;
             this.textBox_pass2.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
@@ -154,9 +163,10 @@ namespace SWDesign1
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Century", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(31, 518);
+            this.label3.Location = new System.Drawing.Point(25, 414);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(106, 23);
+            this.label3.Size = new System.Drawing.Size(93, 21);
             this.label3.TabIndex = 5;
             this.label3.Text = "Password";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -167,9 +177,10 @@ namespace SWDesign1
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Century", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(31, 461);
+            this.label2.Location = new System.Drawing.Point(25, 369);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(113, 23);
+            this.label2.Size = new System.Drawing.Size(100, 21);
             this.label2.TabIndex = 4;
             this.label2.Text = "Username";
             // 
@@ -179,9 +190,10 @@ namespace SWDesign1
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Century", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(31, 406);
+            this.label1.Location = new System.Drawing.Point(25, 325);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 23);
+            this.label1.Size = new System.Drawing.Size(61, 21);
             this.label1.TabIndex = 3;
             this.label1.Text = "Email\r\n";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -189,36 +201,41 @@ namespace SWDesign1
             // textBox_pass1
             // 
             this.textBox_pass1.BackColor = System.Drawing.Color.White;
-            this.textBox_pass1.Location = new System.Drawing.Point(339, 524);
+            this.textBox_pass1.Location = new System.Drawing.Point(271, 419);
+            this.textBox_pass1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_pass1.Name = "textBox_pass1";
-            this.textBox_pass1.Size = new System.Drawing.Size(289, 31);
+            this.textBox_pass1.Size = new System.Drawing.Size(232, 27);
             this.textBox_pass1.TabIndex = 2;
             this.textBox_pass1.TextChanged += new System.EventHandler(this.textBox_pass1_TextChanged);
             // 
             // textBox_user
             // 
             this.textBox_user.BackColor = System.Drawing.Color.White;
-            this.textBox_user.Location = new System.Drawing.Point(339, 464);
+            this.textBox_user.Location = new System.Drawing.Point(271, 371);
+            this.textBox_user.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_user.Name = "textBox_user";
-            this.textBox_user.Size = new System.Drawing.Size(289, 31);
+            this.textBox_user.Size = new System.Drawing.Size(232, 27);
             this.textBox_user.TabIndex = 1;
             // 
             // textBox_email
             // 
             this.textBox_email.BackColor = System.Drawing.Color.White;
-            this.textBox_email.Location = new System.Drawing.Point(339, 406);
+            this.textBox_email.Location = new System.Drawing.Point(271, 325);
+            this.textBox_email.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_email.Name = "textBox_email";
-            this.textBox_email.Size = new System.Drawing.Size(289, 31);
+            this.textBox_email.Size = new System.Drawing.Size(232, 27);
             this.textBox_email.TabIndex = 0;
             // 
             // Form2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(689, 801);
+            this.ClientSize = new System.Drawing.Size(551, 641);
             this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form2";
             this.Text = "Form2";
+            this.Load += new System.EventHandler(this.Form2_Load_1);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

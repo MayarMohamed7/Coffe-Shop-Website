@@ -11,11 +11,13 @@ namespace SWDesign1
 {
     public partial class Form2 : Form
     {
+        SqlConnection conn;
+        SqlCommand cmd;
         public Form2()
         {
             InitializeComponent();
         }
-        SqlConnection conn = new SqlConnection(@"Data Source=HABIBA\SQLEXPRESS;Initial Catalog='Coffeshop System';Integrated Security=True");
+       
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
@@ -64,36 +66,44 @@ namespace SWDesign1
         private void button1_Click(object sender, EventArgs e)
 
         {
-           
-            string connectionString = @"Data Source=HABIBA\SQLEXPRESS;Initial Catalog='Coffeshop System';Integrated Security=True";
-            using (SqlConnection conn = new SqlConnection(connectionString)) ;
+
+            if (textBox_email.Text != string.Empty || textBox_user.Text != string.Empty || textBox_pass1.Text != string.Empty || textBox_pass2.Text != string.Empty || textBox_Adress.Text != string.Empty || textBox_phone.Text != string.Empty)
             {
-                string query = @"INSERT INTO [dbo]. [UserInfo]
-            ([email], [username], [password],[Adress],[phone])
-            VALUES (@email, @username, @password, @address, @phone)";
+                if (textBox_pass1.Text == textBox_pass2.Text)
+                {
 
-                SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@email", textBox_email.Text);
-                cmd.Parameters.AddWithValue("@username", textBox_user.Text);
-                cmd.Parameters.AddWithValue("@password", textBox_pass1.Text);
-                cmd.Parameters.AddWithValue("@address", textBox_Adress.Text);
-                cmd.Parameters.AddWithValue("@phone", textBox_phone.Text);
+                    string name = textBox_user.Text;
+                    string email = textBox_email.Text;
+                    string pass = textBox_pass1.Text;
+                    string address = textBox_Adress.Text;
+                    string phoneNo = textBox_phone.Text;
 
-                conn.Open();
-                cmd.ExecuteNonQuery();
-                conn.Close();
 
-                Form3 ins = new Form3();
-                ins.MdiParent = this.MdiParent;
-                this.Hide();
-                ins.ShowDialog();
-                // SaldataAdapter da = new SqlDataAdapter(cmd);
-                //DataTable dt = new DataTable();
-                //da.Fill (dt);
-            } }
+                    User user = new User();
+                    user.register(name, email, pass, address, phoneNo);
 
-                
-        
+
+                    MessageBox.Show("Your Account is created . Please login now.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Hide();
+                    Form1 login = new Form1();
+                    login.ShowDialog();
+
+                }
+                else
+                {
+                    MessageBox.Show("Passwords don't match ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Please enter value in all field.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
+
             private void Form2_Load(object sender, EventArgs e)
             {
                 conn = new SqlConnection(@"Data Source=desktop-94fv2gg\sqlexpress;Initial Catalog=CoffeShop;Integrated Security=True");
@@ -101,12 +111,19 @@ namespace SWDesign1
             }
 
             private void textBox_pass1_TextChanged(object sender, EventArgs e)
+            {
+
+            }
+
+        private void textBox_phone_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void textBox_phone_TextChanged(object sender, EventArgs e)
+        private void Form2_Load_1(object sender, EventArgs e)
         {
+            conn = new SqlConnection(@"Data Source=desktop-94fv2gg\sqlexpress;Initial Catalog=CoffeShop;Integrated Security=True");
+            conn.Open();
 
         }
     }
