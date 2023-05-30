@@ -16,6 +16,7 @@ namespace SWDesign1
         SqlConnection conn;
         SqlCommand cmd;
         SqlDataReader dr;
+        public static string usermail = "";
         public Form1()
         {
             InitializeComponent();
@@ -46,10 +47,11 @@ namespace SWDesign1
 
                     if (dr.Read())
                     {
+                        usermail = textBox1.Text;
                         dr.Close();
                         this.Hide();
-                        // Home home = new Home();//lma nhot l homepage
-                        //home.ShowDialog();
+                        Form3 menu = new Form3();
+                        menu.ShowDialog();
                     }
                     else
                     {
